@@ -30,5 +30,11 @@ pipeline{
                }
            }
        }
+
+       stage('upload to nexus'){
+            steps{
+                
+            }
+       }
     }
 }
