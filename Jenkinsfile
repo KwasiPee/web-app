@@ -46,13 +46,13 @@ pipeline{
 
     post {
         success {
-            slackSend channel: 'ci-cd', color: 'good', message: "Build successful: ${currentBuild.fullDisplayName}"
+            slackSend channel: 'jenkinstest', color: 'good', message: "Build successful: ${currentBuild.fullDisplayName}"
         }
         failure {
-            slackSend channel: 'ci-cd', color: 'danger', message: "Build failed: ${currentBuild.fullDisplayName}"
+            slackSend channel: 'jenkinstest', color: 'danger', message: "Build failed: ${currentBuild.fullDisplayName}"
         }
         aborted {
-            slackSend channel: 'ci-cd', color: 'warning', message: "Build aborted: ${currentBuild.fullDisplayName}"
+            slackSend channel: 'jenkinstest', color: 'warning', message: "Build aborted: ${currentBuild.fullDisplayName}"
         }
         }
 }
